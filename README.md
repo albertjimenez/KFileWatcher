@@ -16,15 +16,42 @@ Registers the given directory and its subdirectories recursively to monitor any 
  
  ## Dependency
 
- From jitpack
+ From Jitpack
  
  ### Maven
+Add the JitPack repository to your build file
  ```
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+Add the dependency 
+```
+<dependency>
+    <groupId>com.github.albertjimenez</groupId>
+    <artifactId>KFileWatcher</artifactId>
+    <version>f253365483</version>
+</dependency>
 ```
 
 ### Gradle
+Add it in your root build.gradle at the end of repositories:
 ```
-
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+Add the dependency
+```
+dependencies {
+    implementation 'com.github.albertjimenez:KFileWatcher:f253365483'
+}
 ```
  
  ## Usage
